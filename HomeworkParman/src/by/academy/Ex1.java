@@ -41,7 +41,7 @@ public class Ex1 {
 //			}
 //		}
 
-		if (summ > 0 && summ < 100) {
+		if (summ >= 0 && summ < 100) {
 			x = 5;
 		} else {
 			if (summ >= 100 && summ < 200) {
@@ -52,7 +52,7 @@ public class Ex1 {
 					if (age <= 18) {
 						x -= 3;
 					} else {
-						x += 4; 													// второй вариант решения
+						x += 4; // второй вариант решения
 					}
 				} else {
 					if (summ >= 300 && summ < 400) {
