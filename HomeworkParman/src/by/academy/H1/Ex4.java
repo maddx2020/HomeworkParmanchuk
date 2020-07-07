@@ -1,4 +1,4 @@
-package by.academy;
+package by.academy.H1;
 
 public class Ex4 {
 	public static void main(String[] args) {

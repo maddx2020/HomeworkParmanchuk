@@ -1,4 +1,4 @@
-package by.academy;
+package by.academy.H1;
 
 import java.util.Scanner;
 
@@ -45,7 +45,7 @@ public class Ex2 {
 			break;
 		}
 		}
-
+		sc.close();
 	}
 
 }

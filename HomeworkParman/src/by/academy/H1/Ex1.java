@@ -1,4 +1,4 @@
-package by.academy;
+package by.academy.H1;
 
 import java.util.Scanner;
 
@@ -72,6 +72,7 @@ public class Ex1 {
 		System.out.println("скидка = " + x);
 		fsumm = summ - summ * x / 100;
 		System.out.println("Итоговая сумма покупки с учетом скидки: " + fsumm);
+		sc.close();
 	}
 
 }

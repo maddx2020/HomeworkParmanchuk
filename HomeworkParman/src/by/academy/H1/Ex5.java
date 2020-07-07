@@ -1,4 +1,4 @@
-package by.academy;
+package by.academy.H1;
 
 import java.io.IOException;
 import java.util.Scanner;
