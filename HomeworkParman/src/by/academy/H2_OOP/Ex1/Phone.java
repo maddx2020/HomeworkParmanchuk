@@ -67,9 +67,8 @@ public class Phone implements Serializable {
 	}
 
 	void sendMessage(int... numbers) {
-		for(int i:numbers) {
-			System.out.print(numbers[i]);
-			System.out.print(" ");
+		for (int i : numbers) {
+			System.out.print(i + " ");
 		}
 	}
 
