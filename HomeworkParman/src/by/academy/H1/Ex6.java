@@ -21,25 +21,25 @@ public class Ex6 {
 		char array1[] = s1.toCharArray();
 		char array2[] = s2.toCharArray();
 
-		for (int i = 0; i < array1.length; i++) { 			// узнаем повторение букв в первом слове(количество)
+		for (int i = 0; i < array1.length; i++) { // узнаем повторение букв в первом слове(количество)
 			for (int j = 0; j < array1.length; j++) {
 				if (array1[i] == array1[j]) {
 					counts1++;
 				}
 			}
-			for (int z = 0; z < array2.length; z++) { 		// сравниваем i-ую букву первого слова с буквами второго слова
-				if (array1[i] == array2[z]) { 				// и считаем количество совпадений
+			for (int z = 0; z < array2.length; z++) { // сравниваем i-ую букву первого слова с буквами второго слова
+				if (array1[i] == array2[z]) { // и считаем количество совпадений
 					counts2++;
 				}
 			}
-			if (counts1 != counts2) { 						// проверка повторения букв первого слова и количества совпадений
-				System.out.println("False"); 				// со вторым словом
+			if (counts1 != counts2) { // проверка повторения букв первого слова и количества совпадений
+				System.out.println("False"); // со вторым словом
 				return;
 			}
 			counts2 = 0;
 			counts1 = 0;
 		}
-		System.out.println("True");
+		System.out.println("False-True");
 		sc.close();
 	}
 
