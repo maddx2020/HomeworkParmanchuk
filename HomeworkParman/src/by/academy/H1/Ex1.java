@@ -8,38 +8,10 @@ public class Ex1 {
 		double x = 0;
 		double fsumm = 0;
 		Scanner sc = new Scanner(System.in);
-		System.out.print("Введите возраст покупателя: ");
+		System.out.print("Г‚ГўДєГ¤ДЌЕ€Дє ГўГ®Г§Д‘Е•Е„Е€ ДЏГ®Д™ГіДЏЕ•Е€ДєГ«Л™: ");
 		int age = sc.nextInt();
-		System.out.print("Введите сумму покупки: ");
+		System.out.print("Г‚ГўДєГ¤ДЌЕ€Дє Е„ГіД›Д›Гі ДЏГ®Д™ГіДЏД™ДЌ: ");
 		double summ = sc.nextDouble();
-
-//		if (summ > 0 && summ < 100) {
-//			fsumm = summ - summ * 5 / 100;
-//		} else {
-//			if (summ >= 100 && summ < 200) {
-//				fsumm = summ - summ * 7 / 100;
-//			} else {
-//				if (summ >= 200 && summ < 300) {
-//					if (age <= 18) {
-//						fsumm = summ - summ * 9 / 100;
-//					} else {
-//						fsumm = summ - summ * 16 / 100;								//первый вариант решения
-//					}
-//				} else {
-//					if (summ >= 300 && summ < 400) {
-//						fsumm = summ - summ * 15 / 100;
-//					} else {
-//						if (summ >= 400) {
-//							fsumm = summ - summ * 20 / 100;
-//						} else {
-//							System.out.println("Воровать в магазине плохо!");
-//							return;
-//						}
-//					}
-//
-//				}
-//			}
-//		}
 
 		if (summ >= 0 && summ < 100) {
 			x = 5;
@@ -52,7 +24,7 @@ public class Ex1 {
 					if (age <= 18) {
 						x -= 3;
 					} else {
-						x += 4; // второй вариант решения
+						x += 4; 
 					}
 				} else {
 					if (summ >= 300 && summ < 400) {
@@ -61,7 +33,7 @@ public class Ex1 {
 						if (summ >= 400) {
 							x = 20;
 						} else {
-							System.out.println("Воровать в магазине плохо!");
+							System.out.println("Г‚Г®Д‘Г®ГўЕ•Е€Гј Гў Д›Е•ДѓЕ•Г§ДЌГ­Дє ДЏГ«Г®Е‘Г®!");
 							return;
 						}
 					}
@@ -69,9 +41,9 @@ public class Ex1 {
 				}
 			}
 		}
-		System.out.println("скидка = " + x);
+		System.out.println("Е„Д™ДЌГ¤Д™Е• = " + x);
 		fsumm = summ - summ * x / 100;
-		System.out.println("Итоговая сумма покупки с учетом скидки: " + fsumm);
+		System.out.println("ДЊЕ€Г®ДѓГ®ГўЕ•Л™ Е„ГіД›Д›Е• ДЏГ®Д™ГіДЏД™ДЌ Е„ ГіГ·ДєЕ€Г®Д› Е„Д™ДЌГ¤Д™ДЌ: " + fsumm);
 		sc.close();
 	}
 
