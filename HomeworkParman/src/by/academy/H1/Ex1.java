@@ -12,7 +12,7 @@ public class Ex1 {
 		int age = sc.nextInt();
 		System.out.print("Ââĺäčňĺ ńóěěó ďîęóďęč: ");
 		double summ = sc.nextDouble();
-
+		sc.close();
 		if (summ >= 0 && summ < 100) {
 			x = 5;
 		} else {
@@ -44,7 +44,7 @@ public class Ex1 {
 		System.out.println("ńęčäęŕ = " + x);
 		fsumm = summ - summ * x / 100;
 		System.out.println("Čňîăîâŕ˙ ńóěěŕ ďîęóďęč ń ó÷ĺňîě ńęčäęč: " + fsumm);
-		sc.close();
+
 	}
 
 }
