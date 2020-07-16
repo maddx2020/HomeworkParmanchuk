@@ -7,8 +7,7 @@ public class Ex4 {
 			n = (int) Math.pow(2, i);
 			if (n < 1_000_000) {
 				System.out.println("2 в степени " + i + " равняется " + n);
-			} else
-				return;
+			} 
 		}
 
 	}

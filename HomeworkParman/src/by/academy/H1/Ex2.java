@@ -30,8 +30,9 @@ public class Ex2 {
 		}
 		case ("char"): {
 			System.out.print("Введите переменную типа " + name + ": ");
-			int x = sc.nextInt();
-			System.out.println("код символа: " + (char) x);
+			String x = sc.nextLine();
+			char y = x.charAt(0);
+			System.out.println("код символа: " + (int) y);
 			break;
 		}
 		case ("String"): {
