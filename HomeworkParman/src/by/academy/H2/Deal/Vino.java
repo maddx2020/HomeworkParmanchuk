@@ -1,7 +1,5 @@
 package by.academy.H2.Deal;
 
-import by.academy.Lesson5.Product;
-
 public class Vino extends Product {
 
 	int discount;

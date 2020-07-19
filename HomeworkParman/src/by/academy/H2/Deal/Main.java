@@ -16,14 +16,14 @@ public class Main {
 
 		Deal deal = new Deal(user1, user2, products);
 
-		System.out.println(deal.fullPrice());
+		System.out.println("Первая сделка: " + deal.fullPrice());
 
 		Product[] products1 = { prod4, prod5 };
 		Deal deal1 = new Deal(user1, user2, products1);
 
-		System.out.println(deal1.fullPrice());
+		System.out.println("Вторая сделка: " + deal1.fullPrice());
 
-		System.out.println(deal1.fullPrice() + deal.fullPrice());
+		System.out.println("Сумма всех сделок: " + (deal1.fullPrice() + deal.fullPrice()));
 	}
 
 }
