@@ -8,9 +8,9 @@ public class Ex6 {
 		int counts1 = 0;
 		int counts2 = 0;
 		Scanner sc = new Scanner(System.in);
-		System.out.println("Введите первую строку:");
+		System.out.println("Р’РІРµРґРёС‚Рµ РїРµСЂРІСѓСЋ СЃС‚СЂРѕРєСѓ:");
 		String s1 = sc.nextLine();
-		System.out.println("Введите вторую строку:");
+		System.out.println("Р’РІРµРґРёС‚Рµ РІС‚РѕСЂСѓСЋ СЃС‚СЂРѕРєСѓ:");
 		String s2 = sc.nextLine();
 		sc.close();
 		if (s1.length() != s2.length()) {
@@ -21,19 +21,19 @@ public class Ex6 {
 		char array1[] = s1.toCharArray();
 		char array2[] = s2.toCharArray();
 
-		for (int i = 0; i < array1.length; i++) { // узнаем повторение букв в первом слове(количество)
+		for (int i = 0; i < array1.length; i++) { // СѓР·РЅР°РµРј РїРѕРІС‚РѕСЂРµРЅРёРµ Р±СѓРєРІ РІ РїРµСЂРІРѕРј СЃР»РѕРІРµ(РєРѕР»РёС‡РµСЃС‚РІРѕ)
 			for (int j = 0; j < array1.length; j++) {
 				if (array1[i] == array1[j]) {
 					counts1++;
 				}
 			}
-			for (int z = 0; z < array2.length; z++) { // сравниваем i-ую букву первого слова с буквами второго слова
-				if (array1[i] == array2[z]) { // и считаем количество совпадений
+			for (int z = 0; z < array2.length; z++) { // СЃСЂР°РІРЅРёРІР°РµРј i-СѓСЋ Р±СѓРєРІСѓ РїРµСЂРІРѕРіРѕ СЃР»РѕРІР° СЃ Р±СѓРєРІР°РјРё РІС‚РѕСЂРѕРіРѕ СЃР»РѕРІР°
+				if (array1[i] == array2[z]) { // Рё СЃС‡РёС‚Р°РµРј РєРѕР»РёС‡РµСЃС‚РІРѕ СЃРѕРІРїР°РґРµРЅРёР№
 					counts2++;
 				}
 			}
-			if (counts1 != counts2) { // проверка повторения букв первого слова и количества совпадений
-				System.out.println("False"); // со вторым словом
+			if (counts1 != counts2) { // РїСЂРѕРІРµСЂРєР° РїРѕРІС‚РѕСЂРµРЅРёСЏ Р±СѓРєРІ РїРµСЂРІРѕРіРѕ СЃР»РѕРІР° Рё РєРѕР»РёС‡РµСЃС‚РІР° СЃРѕРІРїР°РґРµРЅРёР№
+				System.out.println("False"); // СЃРѕ РІС‚РѕСЂС‹Рј СЃР»РѕРІРѕРј
 				return;
 			}
 			counts2 = 0;
