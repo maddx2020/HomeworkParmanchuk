@@ -6,7 +6,7 @@ public class Ex4 {
 		for (int i = 0;; i++) {
 			n = (int) Math.pow(2, i);
 			if (n < 1_000_000) {
-				System.out.println("2 â ñòåïåíè " + i + " ðàâíÿåòñÿ " + n);
+				System.out.println("2 Ð² ÑÑ‚ÐµÐ¿ÐµÐ½Ð¸ " + i + " Ñ€Ð°Ð²Ð½ÑÐµÑ‚ÑÑ " + n);
 			} 
 		}
 
