@@ -35,13 +35,12 @@ public class Matrix {
 	public float[][] createArray() {
 		getA();
 		getB();
-		float[][] array = new float[a][b];
-		for (int i = 0; i < array.length; i++) {
-			for (int j = 0; j < array[i].length; j++) {
-				array[i][j] = (float) Math.random() * 10 + 1;
+		for (int i = 0; i < array4.length; i++) {
+			for (int j = 0; j < array4[i].length; j++) {
+				array4[i][j] = (float) Math.random() * 10 + 1;
 			}
 		}
-		return array;
+		return array4;
 	}
 
 // print
