@@ -6,6 +6,7 @@ public class Driver {
 
 	private String fullName;
 	private int experience;
+	private Person person;
 
 	public Driver() {
 		super();
@@ -31,6 +32,10 @@ public class Driver {
 
 	public void setExperience(int experience) {
 		this.experience = experience;
+	}
+
+	public Person getPerson() {
+		return person;
 	}
 
 }
