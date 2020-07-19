@@ -6,37 +6,37 @@ public class Ex2 {
 	public static void main(String[] args) {
 
 		Scanner sc = new Scanner(System.in);
-		System.out.print("Введите тип переменной: ");
+		System.out.print("Р’РІРµРґРёС‚Рµ С‚РёРї РїРµСЂРµРјРµРЅРЅРѕР№: ");
 		String name = sc.nextLine();
 
 		switch (name) {
 		case ("int"): {
-			System.out.print("Введите переменную типа " + name + ": ");
+			System.out.print("Р’РІРµРґРёС‚Рµ РїРµСЂРµРјРµРЅРЅСѓСЋ С‚РёРїР° " + name + ": ");
 			int x = sc.nextInt();
-			System.out.println("остаток от деления на 2: " + x % 2);
+			System.out.println("РѕСЃС‚Р°С‚РѕРє РѕС‚ РґРµР»РµРЅРёСЏ РЅР° 2: " + x % 2);
 			break;
 		}
 		case ("double"): {
-			System.out.print("Введите переменную типа " + name + ": ");
+			System.out.print("Р’РІРµРґРёС‚Рµ РїРµСЂРµРјРµРЅРЅСѓСЋ С‚РёРїР° " + name + ": ");
 			double x = sc.nextDouble();
-			System.out.println("70% от числа " + x * 70 / 100);
+			System.out.println("70% РѕС‚ С‡РёСЃР»Р° " + x * 70 / 100);
 			break;
 		}
 		case ("float"): {
-			System.out.print("Введите переменную типа " + name + ": ");
+			System.out.print("Р’РІРµРґРёС‚Рµ РїРµСЂРµРјРµРЅРЅСѓСЋ С‚РёРїР° " + name + ": ");
 			float x = sc.nextFloat();
-			System.out.println("квадрат числа равен: " + x * x);
+			System.out.println("РєРІР°РґСЂР°С‚ С‡РёСЃР»Р° СЂР°РІРµРЅ: " + x * x);
 			break;
 		}
 		case ("char"): {
-			System.out.print("Введите переменную типа " + name + ": ");
+			System.out.print("Р’РІРµРґРёС‚Рµ РїРµСЂРµРјРµРЅРЅСѓСЋ С‚РёРїР° " + name + ": ");
 			String x = sc.nextLine();
 			char y = x.charAt(0);
-			System.out.println("код символа: " + (int) y);
+			System.out.println("РєРѕРґ СЃРёРјРІРѕР»Р°: " + (int) y);
 			break;
 		}
 		case ("String"): {
-			System.out.print("Введите переменную типа " + name + ": ");
+			System.out.print("Р’РІРµРґРёС‚Рµ РїРµСЂРµРјРµРЅРЅСѓСЋ С‚РёРїР° " + name + ": ");
 			String x = sc.nextLine();
 			System.out.println("Hello " + x);
 			break;
