@@ -4,7 +4,7 @@ public class Main {
 
 	public static void main(String[] args) {
 
-		Matrix m1 = new Matrix(2, 3);
+		Matrix m1 = new Matrix(2, 4);
 
 		float[][] ar1 = m1.createArray();
 		float[][] ar2 = m1.createArray();

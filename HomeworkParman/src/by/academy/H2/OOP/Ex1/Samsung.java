@@ -2,7 +2,12 @@ package by.academy.H2.OOP.Ex1;
 
 public class Samsung extends Phone {
 
-	public Samsung(){
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	public Samsung() {
 		super();
 	}
 

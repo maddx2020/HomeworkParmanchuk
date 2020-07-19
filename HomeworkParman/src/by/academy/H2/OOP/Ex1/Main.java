@@ -33,7 +33,7 @@ public class Main {
 
 		nokia.receiveCall("Tomas", 11_11_111);
 		System.out.println("");
-		nokia.sendMessage(101,102,103,104,105);
+		nokia.sendMessage(101, 102, 103, 104, 105);
 	}
 
 }
