@@ -31,6 +31,7 @@ public class Matrix {
 		this.b = b;
 	}
 
+//array create
 	public float[][] createArray() {
 		getA();
 		getB();
@@ -43,7 +44,7 @@ public class Matrix {
 		return array;
 	}
 
-// vyvod na pechat'
+// print
 	public void printArray(float[][] array) {
 		for (int i = 0; i < array.length; i++) {
 			for (int j = 0; j < array[i].length; j++) {
@@ -53,7 +54,7 @@ public class Matrix {
 		}
 	}
 
-//umnojenie na chislo
+//multiplication on a number
 	public float[][] multiplicationOnNumber(float[][] array1, float number) {
 		float[][] array3 = new float[a][b];
 		for (int i = 0; i < array1.length; i++) {
@@ -64,7 +65,7 @@ public class Matrix {
 		return array3;
 	}
 
-//summa matric
+//sum matrix
 	public float[][] summMatrix(float[][] array1, float[][] array2) {
 		float[][] array3 = new float[a][b];
 		for (int i = 0; i < array1.length; i++) {

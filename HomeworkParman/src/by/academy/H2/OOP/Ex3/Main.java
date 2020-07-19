@@ -1,7 +1,5 @@
 package by.academy.H2.OOP.Ex3;
 
-import by.academy.Lesson5.OOP.Ex3.Matrix;
-
 public class Main {
 
 	public static void main(String[] args) {
