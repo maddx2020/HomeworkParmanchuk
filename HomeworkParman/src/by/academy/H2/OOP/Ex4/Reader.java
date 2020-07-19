@@ -6,6 +6,7 @@ public class Reader {
 	private String facultet;
 	private int phoneNumber;
 	private String birthday;
+	private Reader[] readers;
 
 	public Reader() {
 		super();
@@ -20,62 +21,112 @@ public class Reader {
 		this.phoneNumber = phoneNumber;
 	}
 
-	protected String getFio() {
+	public String getFio() {
 		return fio;
 	}
 
-	protected void setFio(String fio) {
+	public void setFio(String fio) {
 		this.fio = fio;
 	}
 
-	protected int getBiletNumber() {
+	public int getBiletNumber() {
 		return biletNumber;
 	}
 
-	protected void setBiletNumber(int biletNumber) {
+	public void setBiletNumber(int biletNumber) {
 		this.biletNumber = biletNumber;
 	}
 
-	protected String getFacultet() {
+	public String getFacultet() {
 		return facultet;
 	}
 
-	protected void setFacultet(String facultet) {
+	public void setFacultet(String facultet) {
 		this.facultet = facultet;
 	}
 
-	protected int getPhoneNumber() {
+	public int getPhoneNumber() {
 		return phoneNumber;
 	}
 
-	protected void setPhoneNumber(int phoneNumber) {
+	public void setPhoneNumber(int phoneNumber) {
 		this.phoneNumber = phoneNumber;
 	}
 
-	protected String getBirthday() {
+	public String getBirthday() {
 		return birthday;
 	}
 
-	protected void setBirthday(String birthday) {
+	public void setBirthday(String birthday) {
 		this.birthday = birthday;
 	}
 
+	public Reader[] getReaders() {
+		return readers;
+	}
+
+	public void setReaders(Reader[] readers) {
+		this.readers = readers;
+	}
+
 	public void takeBook() {
-		System.out.println("Читатель взял книгу.");
+		System.out.println("Читатель " + fio + " взял книгу.");
 	}
 
 	public void returnBook() {
-		System.out.println("Читатель вернул книгу.");
+		System.out.println("Читатель " + fio + " вернул книгу.");
 	}
 
 	public void takeBook(int n) {
 		System.out.println(fio + " взял " + n + " книги");
 	}
 
-	public void takeBook(String[] titles) {
+	public void returnBook(int n) {
+		System.out.println(fio + " вернул " + n + " книги");
+	}
+
+	public void takeBook(String... titles) {
 		System.out.print(fio + " взял книги: ");
-		for (String i : titles) {
-			System.out.print(i + " ");
+		for (int i = 0; i < titles.length; i++) {
+			if (i == (titles.length - 1)) {
+				System.out.println(titles[i] + ".");
+			} else {
+				System.out.print(titles[i] + ", ");
+			}
 		}
 	}
+
+	public void returnBook(String... titles) {
+		System.out.print(fio + " вернул книги: ");
+		for (int i = 0; i < titles.length; i++) {
+			if (i == (titles.length - 1)) {
+				System.out.println(titles[i] + ".");
+			} else {
+				System.out.print(titles[i] + ", ");
+			}
+		}
+	}
+
+	public void takeBook(Book... books) {
+		System.out.print(fio + " взял книги: ");
+		for (int i = 0; i < books.length; i++) {
+			if (i == (books.length - 1)) {
+				System.out.println(books[i].getAuthor() + " - " + books[i].getTitle() + ".");
+			} else {
+				System.out.print(books[i].getAuthor() + " - " + books[i].getTitle() + ", ");
+			}
+		}
+	}
+
+	public void returnBook(Book... books) {
+		System.out.print(fio + " вернул книги: ");
+		for (int i = 0; i < books.length; i++) {
+			if (i == (books.length - 1)) {
+				System.out.println(books[i].getAuthor() + " - " + books[i].getTitle() + ".");
+			} else {
+				System.out.print(books[i].getAuthor() + " - " + books[i].getTitle() + ", ");
+			}
+		}
+	}
+
 }
