@@ -68,13 +68,6 @@ public class Car {
 		System.out.println("Поворот направо");
 	}
 
-	
-	
-	
-	
-	
-	
-	
 	public void turnLeft() {
 		System.out.println("Поворот налево");
 	}
