@@ -71,6 +71,10 @@ public class Car {
 	
 	
 	
+	
+	
+	
+	
 	public void turnLeft() {
 		System.out.println("Поворот налево");
 	}
