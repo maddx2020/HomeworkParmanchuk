@@ -12,7 +12,7 @@ public class Ex6 {
 		String s1 = sc.nextLine();
 		System.out.println("¬ведите вторую строку:");
 		String s2 = sc.nextLine();
-
+		sc.close();
 		if (s1.length() != s2.length()) {
 			System.out.println("False");
 			return;
@@ -39,8 +39,7 @@ public class Ex6 {
 			counts2 = 0;
 			counts1 = 0;
 		}
-		System.out.println("False-True");
-		sc.close();
+		System.out.println("True");
 	}
 
 }
