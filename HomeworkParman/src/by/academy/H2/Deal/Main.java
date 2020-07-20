@@ -24,6 +24,9 @@ public class Main {
 		System.out.println("Вторая сделка: " + deal1.fullPrice());
 
 		System.out.println("Сумма всех сделок: " + (deal1.fullPrice() + deal.fullPrice()));
+		
+		
+		
 	}
 
 }

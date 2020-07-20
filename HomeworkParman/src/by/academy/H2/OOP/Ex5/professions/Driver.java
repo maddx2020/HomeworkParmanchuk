@@ -2,9 +2,13 @@ package by.academy.H2.OOP.Ex5.professions;
 
 import by.academy.H2.OOP.Ex2.Person;
 
-public class Driver {
+public class Driver extends Person {
 
-	private String fullName;
+	/**
+		 * 
+		 */
+	private static final long serialVersionUID = 1L;
+
 	private int experience;
 	private Person person;
 
@@ -12,10 +16,10 @@ public class Driver {
 		super();
 	}
 
-	public Driver(String fullName, int experience) {
+	public Driver(Person person, int experience) {
 		super();
-		this.fullName = fullName;
 		this.experience = experience;
+		this.person = person;
 	}
 
 	public String getFullName() {
@@ -36,6 +40,10 @@ public class Driver {
 
 	public Person getPerson() {
 		return person;
+	}
+
+	public void setPerson(Person person) {
+		this.person = person;
 	}
 
 }

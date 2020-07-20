@@ -4,7 +4,7 @@ import by.academy.H2.OOP.Ex5.details.Engine;
 import by.academy.H2.OOP.Ex5.professions.Driver;
 
 public class Lorry extends Car {
-	
+
 	private int carrying;
 
 	public Lorry() {
@@ -12,9 +12,9 @@ public class Lorry extends Car {
 
 	}
 
-	public Lorry(String marka, String carClass, int weight, Driver driver, Engine engine,int carrying) {
+	public Lorry(String marka, String carClass, int weight, Driver driver, Engine engine, int carrying) {
 		super(marka, carClass, weight, driver, engine);
-		this.carrying=carrying;
+		this.carrying = carrying;
 
 	}
 
@@ -24,6 +24,12 @@ public class Lorry extends Car {
 
 	public void setCarrying(int carrying) {
 		this.carrying = carrying;
+	}
+
+	@Override
+	public void printInfo() {
+		super.printInfo();
+		System.out.println("Грузоподъемность: " + getCarrying() + " кг");
 	}
 
 }

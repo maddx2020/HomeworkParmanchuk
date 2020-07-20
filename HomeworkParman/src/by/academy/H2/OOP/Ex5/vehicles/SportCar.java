@@ -24,4 +24,10 @@ public class SportCar extends Car {
 		this.speed = speed;
 	}
 
+	@Override
+	public void printInfo() {
+		super.printInfo();
+		System.out.println("Максимальная скорость: " + getSpeed() + " км/ч");
+	}
+
 }

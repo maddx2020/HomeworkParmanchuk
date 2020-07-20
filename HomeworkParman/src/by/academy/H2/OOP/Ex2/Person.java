@@ -37,11 +37,11 @@ public class Person implements Serializable {
 		this.age = age;
 	}
 
-	void move() {
+	public void move() {
 		System.out.println("Person " + fullName + " move");
 	}
 
-	void speak() {
+	public void speak() {
 		System.out.println("Person " + fullName + " speak");
 	}
 

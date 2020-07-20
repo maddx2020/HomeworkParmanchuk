@@ -73,10 +73,11 @@ public class Car {
 	}
 
 	public void printInfo() {
-		System.out.println("Марка: " + getMarka() + ", класс: " + getCarClass() + ", вес: " + getWeight());
-		System.out.println("Фирма производитель двигателя: " + getEngine().getCompany() + ", мощность: "
+		System.out.println("Марка: " + getMarka() + "\nКласс: " + getCarClass() + "\nВес: " + getWeight() + " кг");
+		System.out.println("Фирма производитель двигателя: " + getEngine().getCompany() + "\nMощность: "
 				+ getEngine().getPower() + " л.с.");
 		System.out
-				.println("Водитель: " + getDriver().getFullName() + ", стаж вождения: " + getDriver().getExperience());
+				.println("Водитель: " + getDriver().getPerson().getFullName() + ", " + getDriver().getPerson().getAge()
+						+ " лет" + "\nCтаж вождения: " + getDriver().getExperience() + " лет");
 	}
 }
