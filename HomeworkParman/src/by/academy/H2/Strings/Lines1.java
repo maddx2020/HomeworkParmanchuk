@@ -1,33 +1,34 @@
 package by.academy.H2.Strings;
 
+import java.util.Scanner;
+
 public class Lines1 {
 
 	public static void main(String[] args) {
 
-		String a = "Какойто текст1111111111";
-		String b = "Теперь уже новый тек";
-		String c = "Вот новый текст111111111111";
+		String line = new String();
+		String minLine = new String();
+		String maxLine = new String();
+		int maxLength = 0;
+		int minLength = 0;
 
-		System.out.println(a.length());
-		System.out.println(b.length());
-		System.out.println(c.length());
-		System.out.println();
+		Scanner str = new Scanner(System.in);
+		System.out.println("Введите n строк (окончание - пустая строка)");
+		do {
+			System.out.print("Введите строку: ");
+			line = str.nextLine();
 
-		int[] len = { a.length(), b.length(), c.length() };
-		int max = len[0];
-		int min = len[0];
-		for (int i : len) {
-			if (max < i) {
-				max = i;
+			if (line.length() > maxLength) {
+				maxLength = line.length();
+				maxLine = line;
+			} else if (line.length() != 0) {
+				minLength = line.length();
+				minLine = line;
 			}
-			if (min > i) {
-				min = i;
-			}
-		}
-
-		System.out.println(max);
-		System.out.println(min);
-
+		} while (line.length() != 0);
+		System.out.println("Самая длинная строка - " + maxLine + ", " + maxLength + " символов.");
+		System.out.println("Самая короткая строка - " + minLine + ", " + minLength + " символов.");
+		str.close();
 	}
 
 }
