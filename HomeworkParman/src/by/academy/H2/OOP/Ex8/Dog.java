@@ -8,8 +8,8 @@ public class Dog extends Animal {
 		super();
 	}
 
-	public Dog(String food, String location, String name) {
-		super(food, location);
+	public Dog(String clas, String food, String location, String name) {
+		super(clas, food, location);
 		this.name = name;
 	}
 

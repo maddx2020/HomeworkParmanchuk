@@ -3,16 +3,18 @@ package by.academy.H2.OOP.Ex8;
 public class Animal {
 
 	private String food;
-	private String locstion;
+	private String location;
+	private String clas;
 
 	public Animal() {
 		super();
 	}
 
-	public Animal(String food, String locstion) {
+	public Animal(String clas, String food, String location) {
 		super();
+		this.clas = clas;
 		this.food = food;
-		this.locstion = locstion;
+		this.location = location;
 	}
 
 	public String getFood() {
@@ -23,12 +25,20 @@ public class Animal {
 		this.food = food;
 	}
 
-	public String getLocstion() {
-		return locstion;
+	public String getLocation() {
+		return location;
 	}
 
-	public void setLocstion(String locstion) {
-		this.locstion = locstion;
+	public void setLocstion(String location) {
+		this.location = location;
+	}
+
+	public String getClas() {
+		return clas;
+	}
+
+	public void setClas(String clas) {
+		this.clas = clas;
 	}
 
 	public void makeNoise() {
@@ -40,7 +50,7 @@ public class Animal {
 	}
 
 	public void sleep() {
-		System.out.println("cладко спит");
+		System.out.println(" cладко спит");
 	}
 
 }

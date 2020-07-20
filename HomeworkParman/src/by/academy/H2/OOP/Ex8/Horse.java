@@ -8,8 +8,8 @@ public class Horse extends Animal {
 		super();
 	}
 
-	public Horse(String food, String locstion, String color) {
-		super(food, locstion);
+	public Horse(String clas, String food, String locstion, String color) {
+		super(clas, food, locstion);
 		this.color = color;
 
 	}
@@ -29,7 +29,7 @@ public class Horse extends Animal {
 
 	@Override
 	public void eat() {
-		System.out.println("Лошадка жует овес");
+		System.out.println("Лошадка жует травинку");
 	}
 
 }
