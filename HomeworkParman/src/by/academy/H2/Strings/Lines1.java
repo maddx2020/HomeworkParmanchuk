@@ -10,10 +10,10 @@ public class Lines1 {
 		String minLine = new String();
 		String maxLine = new String();
 		int maxLength = 0;
-		int minLength = 0;
+		int minLength = Integer.MAX_VALUE;
 
 		Scanner str = new Scanner(System.in);
-		System.out.println("Введите n строк (окончание - пустая строка)");
+		System.out.println("Введите n строк для нахождения Большей и Меньшей по длине(окончание - пустая строка)");
 		do {
 			System.out.print("Введите строку: ");
 			line = str.nextLine();
@@ -21,13 +21,19 @@ public class Lines1 {
 			if (line.length() > maxLength) {
 				maxLength = line.length();
 				maxLine = line;
-			} else if (line.length() != 0) {
+			}
+			if (line.length() != 0 && line.length() <= minLength) {
 				minLength = line.length();
 				minLine = line;
 			}
 		} while (line.length() != 0);
-		System.out.println("Самая длинная строка - " + maxLine + ", " + maxLength + " символов.");
-		System.out.println("Самая короткая строка - " + minLine + ", " + minLength + " символов.");
+		if (maxLength == minLength) {
+			System.out.println("Одинаковые строки: " + maxLine + ", " + minLength + " символов.");
+		} else {
+			System.out.println("Самая длинная строка - " + maxLine + ", " + maxLength + " символов.");
+			System.out.println("Самая короткая строка - " + minLine + ", " + minLength + " символов.");
+		}
+
 		str.close();
 	}
 
