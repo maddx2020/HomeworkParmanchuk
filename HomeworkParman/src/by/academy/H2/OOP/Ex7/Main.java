@@ -1,10 +1,10 @@
-package by.academy.H2.OOP.Ex5;
+package by.academy.H2.OOP.Ex7;
 
 import by.academy.H2.OOP.Ex2.Person;
-import by.academy.H2.OOP.Ex5.details.Engine;
-import by.academy.H2.OOP.Ex5.professions.Driver;
-import by.academy.H2.OOP.Ex5.vehicles.Lorry;
-import by.academy.H2.OOP.Ex5.vehicles.SportCar;
+import by.academy.H2.OOP.Ex7.details.Engine;
+import by.academy.H2.OOP.Ex7.professions.Driver;
+import by.academy.H2.OOP.Ex7.vehicles.Lorry;
+import by.academy.H2.OOP.Ex7.vehicles.SportCar;
 
 public class Main {
 

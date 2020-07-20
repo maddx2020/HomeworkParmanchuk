@@ -1,4 +1,4 @@
-package by.academy.H2.OOP.Ex5.professions;
+package by.academy.H2.OOP.Ex7.professions;
 
 import by.academy.H2.OOP.Ex2.Person;
 
