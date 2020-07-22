@@ -9,8 +9,11 @@ public class Lines2 {
 		String s1 = "Четное";
 		String s2 = "половина";
 
-		System.out.println(s1.substring(0, (s1.length() / 2)).concat(s2.substring(s2.length() / 2)));
-
+		if ((s1.length() % 2) != 0 || (s2.length() % 2) != 0) {
+			System.out.println("Одно из введенных слов имеет нечетное количество букв");
+		} else {
+			System.out.println(s1.substring(0, (s1.length() / 2)).concat(s2.substring(s2.length() / 2)));
+		}
 	}
 
 }
