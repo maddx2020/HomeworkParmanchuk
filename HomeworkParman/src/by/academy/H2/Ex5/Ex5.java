@@ -9,7 +9,7 @@
 //Написать класс EmailValidator в методе main, валидирующий email.
 //Все три класса должны реализовать интерфейс Validator.
 
-package by.academy.H2;
+package by.academy.H2.Ex5;
 
 public class Ex5 {
 

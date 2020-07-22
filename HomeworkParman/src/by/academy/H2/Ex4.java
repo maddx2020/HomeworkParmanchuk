@@ -7,5 +7,8 @@
 package by.academy.H2;
 
 public class Ex4 {
+int n=0;
+
+
 
 }
