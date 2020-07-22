@@ -1,9 +1,9 @@
 //Условие задачи: ввести 2 слова, состоящие из четного числа букв. 
 //Получить слово состоящее из первой половины первого слова и второй половины второго слова.
 
-package by.academy.H2.Ex10_11;
+package by.academy.H2;
 
-public class Lines2 {
+public class Ex11 {
 	public static void main(String[] args) {
 
 		String s1 = "Четное";

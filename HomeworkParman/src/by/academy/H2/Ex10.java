@@ -1,9 +1,9 @@
 //Ввести n слов с консоли. Найти слово, в котором число различных символов минимально.
 //Если таких слов несколько, найти первое из них.
 
-package by.academy.H2.Ex10_11;
+package by.academy.H2;
 
-public class Lines1 {
+public class Ex10 {
 	public static void main(String[] args) {
 
 		int minIndexOfString = -1;
