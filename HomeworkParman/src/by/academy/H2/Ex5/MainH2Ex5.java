@@ -1,5 +1,7 @@
 package by.academy.H2.Ex5;
 
+import by.academy.BelarusPhoneValidator;
+
 public class MainH2Ex5 {
 
 	public static void main(String[] args) {
@@ -9,7 +11,7 @@ public class MainH2Ex5 {
 		Validator email = new EmailValidator();
 		
 		System.out.println(amer.validate("+112345678901"));
-		System.out.println(bel.validate("+375172767438"));
+		System.out.println(bel.validate("+375442767438"));
 		System.out.println(email.validate("tut@mozgov.net"));
 		
 
