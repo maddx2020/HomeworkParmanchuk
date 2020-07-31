@@ -6,8 +6,6 @@ package by.academy.H2;
 public class Ex11 {
 	public static void main(String[] args) {
 
-		
-		
 		String s1 = "Четное";
 		String s2 = "половина";
 
