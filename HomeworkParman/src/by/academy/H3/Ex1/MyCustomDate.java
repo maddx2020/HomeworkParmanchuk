@@ -1,16 +1,13 @@
 package by.academy.H3.Ex1;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
 
 public class MyCustomDate {
 
 	private Day day;
 	private Month month;
 	private Year year;
-	private Date date;
-	static SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
 
 	public MyCustomDate() {
 		super();
@@ -122,16 +119,55 @@ public class MyCustomDate {
 
 	}
 
-	public String getDate() {
+	public String getStringDate() {
 		return day.day + "-" + month.month + "-" + year.year;
 	}
 
-	public String dayOfWeek() throws ParseException {
+	public int numberOfWeek() {
+		Calendar c = new GregorianCalendar(year.year, month.month - 1, day.day);
+		return c.get(Calendar.DAY_OF_WEEK);
 
-		SimpleDateFormat sdfDay = new SimpleDateFormat("EEEE");
+	}
 
-		date = sdf.parse(getDate());
-		return sdfDay.format(date);
+	public enum DayOfWeek {
+		Monday("Понедельник"), Tuesday("Вторник"), Wednesday("Среда"), Thursday("Четверг"), Friday("Пятница"),
+		Saturday("Суббота"), Sunday("Воскресенье");
+
+		private String id;
+
+		private DayOfWeek(String id) {
+			this.id = id;
+		}
+
+		public String getId() {
+			return id;
+		}
+
+		public void setId(String id) {
+			this.id = id;
+		}
+	}
+
+	public String printDayOFWeek() {
+		String str;
+		switch (numberOfWeek()) {
+		case (1):
+			return str = "День недели: " + DayOfWeek.Sunday.getId();
+		case (2):
+			return str = "День недели: " + DayOfWeek.Monday.getId();
+		case (3):
+			return str = "День недели: " + DayOfWeek.Tuesday.getId();
+		case (4):
+			return str = "День недели: " + DayOfWeek.Wednesday.getId();
+		case (5):
+			return str = "День недели: " + DayOfWeek.Thursday.getId();
+		case (6):
+			return str = "День недели: " + DayOfWeek.Friday.getId();
+		case (7):
+			return str = "День недели: " + DayOfWeek.Saturday.getId();
+		default:
+			return "";
+		}
 	}
 
 	@Override
@@ -143,12 +179,7 @@ public class MyCustomDate {
 		builder.append(month.month);
 		builder.append(". Год = ");
 		builder.append(year.year);
-		builder.append(". \nДень недели - ");
-		try {
-			builder.append(dayOfWeek());
-		} catch (ParseException e) {
-			e.printStackTrace();
-		}
+		builder.append("\n" + printDayOFWeek());
 		if (isLeapYear()) {
 			builder.append(". Високосный год");
 		} else {
