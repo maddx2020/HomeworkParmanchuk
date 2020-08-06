@@ -11,7 +11,7 @@ public class MyCustomDate {
 	private Year year;
 	private Date date;
 	static SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
-	
+
 	public MyCustomDate() {
 		super();
 	}
@@ -127,7 +127,7 @@ public class MyCustomDate {
 	}
 
 	public String dayOfWeek() throws ParseException {
-		
+
 		SimpleDateFormat sdfDay = new SimpleDateFormat("EEEE");
 
 		date = sdf.parse(getDate());
@@ -149,9 +149,9 @@ public class MyCustomDate {
 		} catch (ParseException e) {
 			e.printStackTrace();
 		}
-		if(isLeapYear()) {
+		if (isLeapYear()) {
 			builder.append(". Високосный год");
-		}else {
+		} else {
 			builder.append(". Невисокосный год");
 		}
 		return builder.toString();
