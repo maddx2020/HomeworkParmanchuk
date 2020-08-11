@@ -9,16 +9,16 @@ public class MyCustomDate {
 	private Month month;
 	private Year year;
 
-	public MyCustomDate() {
+	MyCustomDate() {
 		super();
 	}
 
-	public MyCustomDate(String strDate) {
+	MyCustomDate(String strDate) {
 		super();
 		setDate(strDate);
 	}
 
-	public MyCustomDate(int d, Integer m, int y) {
+	MyCustomDate(int d, Integer m, int y) {
 		super();
 		day = new Day(d);
 		month = new Month(m);
