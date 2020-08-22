@@ -16,7 +16,6 @@ public class Ex4 {
 		String line;
 
 		try (BufferedReader br = new BufferedReader(new FileReader("Ex2.txt"))) {
-
 			while ((line = br.readLine()) != null) {
 				sb.append(line);
 			}
@@ -26,16 +25,23 @@ public class Ex4 {
 
 		line = sb.toString();
 
-		for (int i = 1; i <= 5; i++) {
+		for (int i = 1; i <= 100; i++) {
 			String path = "Temp/" + i + ".txt";
 			try (FileWriter fw = new FileWriter(path)) {
 				int rand = (int) (Math.random() * line.length() + 1);
 				fw.write(line.substring(0, rand));
-
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
-
 		}
+
+		try (FileWriter fwResult = new FileWriter("result_Ex4.txt")) {
+			for (File f : file.listFiles()) {
+				fwResult.write(f.getName() + " " + f.length() + " bytes." + "\n");
+			}
+		} catch (IOException e) {
+			System.out.println("Something wrong with OutPut process");
+		}
+
 	}
 }
