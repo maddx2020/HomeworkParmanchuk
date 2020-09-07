@@ -4,10 +4,17 @@ public class User extends Person {
 
 	public String login;
 	private String password;
-	protected String email;
+	private String email;
 
 	User() {
 		super();
+	}
+
+	public User(String login, String password, String email) {
+		super();
+		this.login = login;
+		this.password = password;
+		this.email = email;
 	}
 
 	public User(String firstName, String lastName, int age, String dateOfBirth, String login, String password,
@@ -42,7 +49,7 @@ public class User extends Person {
 		this.email = email;
 	}
 
-	public String printUserInfo() {
+	protected String printUserInfo() {
 		return toString();
 	}
 
