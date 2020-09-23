@@ -2,38 +2,44 @@ package by.academy.H7;
 
 public class Dock {
 
-	private int capasity = 0;
 
-//за счет синхронизации в доке может находится только один корабль
+	private Port port;
+
+	Dock(Port port) {
+		this.port = port;
+	}
+
+//за счет синхронизации на этом этапе в доке может находится только один корабль
 	public synchronized void unload() {
-		while (capasity >= 30) {
+		while (port.capasity >= 60) {
 			try {
 				wait();
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
 		}
-		capasity++;
+		port.capasityUp();
 		System.out.println(
-				Thread.currentThread().getName() + " UNLOAD 1 Container " + " \t\t\tPort capasity - " + capasity);
+				Thread.currentThread().getName() + " UNLOAD 1 Container " + " \t\t\tPort capasity - " + port.capasity);
 
-		notifyAll();
+		notify();
 
 	}
 
 	public synchronized void load() {
-		while (capasity < 1) {
+		while (port.capasity < 1) {
 			try {
 				wait();
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
 		}
-		capasity--;
+		port.capasityDown();
 		System.out.println(
-				Thread.currentThread().getName() + " LOAD 1 Container " + " \t\t\tPort capasity - " + capasity);
+				Thread.currentThread().getName() + " LOAD 1 Container " + " \t\t\tPort capasity - " + port.capasity);
 
-		notifyAll();
+		notify();
 	}
+
 
 }

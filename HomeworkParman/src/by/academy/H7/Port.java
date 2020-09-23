@@ -1,17 +1,18 @@
 package by.academy.H7;
 
 public class Port {
-	public static void main(String[] args) {
+	
+	public int capasity;
+	
+	
+//за счет синхронизации на этом этапе емкость порта заполняется корректно
+//при работе нескольких доков
+	
+	public synchronized void capasityUp() {
+		capasity++;
+	}
 
-		Dock dock = new Dock();
-
-		Ship ship1 = new Ship(dock);
-		Ship ship2 = new Ship(dock);
-		Ship ship3 = new Ship(dock);
-
-		ship1.start();
-		ship2.start();
-		ship3.start();
-
+	public synchronized void capasityDown() {
+		capasity--;
 	}
 }
