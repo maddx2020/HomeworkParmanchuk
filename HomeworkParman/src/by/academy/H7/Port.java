@@ -2,7 +2,7 @@ package by.academy.H7;
 
 public class Port {
 	
-	public int capasity;
+	private int capasity;
 	
 	
 //за счет синхронизации на этом этапе емкость порта заполняется корректно
@@ -14,5 +14,9 @@ public class Port {
 
 	public synchronized void capasityDown() {
 		capasity--;
+	}
+	
+	public int getCapasity() {
+		return capasity;
 	}
 }
